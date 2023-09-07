@@ -56,6 +56,7 @@ public class MembersController {
            }else {
                 dataVO.setSuccess(true);
                 dataVO.setMessage("로그인 성공");
+                dataVO.setData(mvo);
                 resMap.put("data", dataVO);
                 return resMap;
            }
