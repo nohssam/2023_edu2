@@ -4,17 +4,17 @@
  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
 <mapper namespace="com.ict.edu2.mapper.members.Member_Mapper">
-    <select id="getList" resultType="com.ict.edu2.member.vo.MemberVO">
+    <select id="member_list" resultType="com.ict.edu2.model.members.MemberVO">
       select * from members order by m_idx asc
     </select>
     <select id="getIDCnt" parameterType="String" resultType="int">
       select count(*) from members where m_id = #{m_id}
     </select>
-     <select id="getMemberOne" parameterType="String" resultType="com.ict.edu2.member.vo.MemberVO">
+     <select id="getMemberOne" parameterType="String" resultType="com.ict.edu2.model.members.MemberVO">
       select * from members where m_id = #{m_id}
     </select>
 
-    <insert id="getMemberAdd" parameterType="com.ict.edu2.member.vo.MemberVO">
+    <insert id="getMemberAdd" parameterType="com.ict.edu2.model.members.MemberVO">
     insert into members(m_id, m_pw, m_name,
     <if test="m_age != null and m_age != ''"> 
       m_age,

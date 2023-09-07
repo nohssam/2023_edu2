@@ -19,7 +19,7 @@ public class MemberService {
     
     public List<MemberVO> getList(){
         log.info("list-service");
-        List<MemberVO> list = member_Mapper.getList();
+        List<MemberVO> list = member_Mapper.member_list();
         return list;
     }
 
